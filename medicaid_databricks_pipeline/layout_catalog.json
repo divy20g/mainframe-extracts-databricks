@@ -1,0 +1,3106 @@
+{
+  "MEMBER": {
+    "file": "MEMBER.txt",
+    "record_length": 380,
+    "fields": [
+      {
+        "name": "Member_ID",
+        "start": 1,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicaid_ID",
+        "start": 11,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Case_Number",
+        "start": 23,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "SSN",
+        "start": 33,
+        "length": 9,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Name",
+        "start": 42,
+        "length": 20,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "First_Name",
+        "start": 62,
+        "length": 15,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Middle_Name",
+        "start": 77,
+        "length": 15,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Name_Suffix",
+        "start": 92,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "DOB",
+        "start": 96,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Gender",
+        "start": 104,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Race_Code",
+        "start": 105,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Ethnicity_Code",
+        "start": 107,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Marital_Status",
+        "start": 108,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Address_Line1",
+        "start": 109,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Address_Line2",
+        "start": 139,
+        "length": 20,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "City",
+        "start": 159,
+        "length": 20,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "State",
+        "start": 179,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Zip",
+        "start": 181,
+        "length": 9,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "County_Code",
+        "start": 190,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Home_Phone",
+        "start": 193,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Cell_Phone",
+        "start": 203,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Email",
+        "start": 213,
+        "length": 40,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Preferred_Language",
+        "start": 253,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Citizenship_Code",
+        "start": 256,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Immigration_Status",
+        "start": 257,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Aid_Category",
+        "start": 259,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Eligibility_Status",
+        "start": 262,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Eligibility_Start",
+        "start": 263,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Eligibility_End",
+        "start": 271,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "RE_Code",
+        "start": 279,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "MCO_Plan_ID",
+        "start": 283,
+        "length": 8,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "PCP_Provider_ID",
+        "start": 291,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "LOC_Code",
+        "start": 301,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Spenddown_Amount",
+        "start": 303,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "Medicare_ID",
+        "start": 312,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicare_Part_A_Ind",
+        "start": 324,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicare_Part_B_Ind",
+        "start": 325,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicare_Part_D_Ind",
+        "start": 326,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Dual_Eligible_Code",
+        "start": 327,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Institutional_Status",
+        "start": 329,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Waiver_Program_Code",
+        "start": 330,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Caseworker_ID",
+        "start": 333,
+        "length": 8,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Household_Size",
+        "start": 341,
+        "length": 2,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "FPL_Percent",
+        "start": 343,
+        "length": 3,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Deceased_Indicator",
+        "start": 346,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Death_Date",
+        "start": 347,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 355,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 363,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 366,
+        "length": 15,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "PROVIDER": {
+    "file": "PROVIDER.txt",
+    "record_length": 400,
+    "fields": [
+      {
+        "name": "Provider_ID",
+        "start": 1,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "NPI",
+        "start": 11,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Legacy_Provider_ID",
+        "start": 21,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Provider_Name",
+        "start": 31,
+        "length": 35,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "DBA_Name",
+        "start": 66,
+        "length": 35,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Provider_Type",
+        "start": 101,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Provider_Category",
+        "start": 103,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Specialty_Code_1",
+        "start": 106,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Specialty_Code_2",
+        "start": 110,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Taxonomy_Code",
+        "start": 114,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Tax_ID",
+        "start": 124,
+        "length": 9,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "SSN",
+        "start": 133,
+        "length": 9,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "License_Number",
+        "start": 142,
+        "length": 15,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "License_State",
+        "start": 157,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "DEA_Number",
+        "start": 159,
+        "length": 9,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Address_Line1",
+        "start": 168,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Address_Line2",
+        "start": 198,
+        "length": 20,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "City",
+        "start": 218,
+        "length": 20,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "State",
+        "start": 238,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Zip",
+        "start": 240,
+        "length": 9,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "County_Code",
+        "start": 249,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Phone",
+        "start": 252,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Fax",
+        "start": 262,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Email",
+        "start": 272,
+        "length": 40,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Billing_NPI",
+        "start": 312,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Group_Affiliation_ID",
+        "start": 322,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Enrollment_Date",
+        "start": 332,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Revalidation_Date",
+        "start": 340,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Termination_Date",
+        "start": 348,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Status",
+        "start": 356,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicaid_Participation_Ind",
+        "start": 357,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicare_Participation_Ind",
+        "start": 358,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Ownership_Type",
+        "start": 359,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Accreditation_Code",
+        "start": 361,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Site_Of_Service_Code",
+        "start": 365,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Panel_Capacity",
+        "start": 367,
+        "length": 4,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Language_Spoken",
+        "start": 371,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 374,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 382,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 385,
+        "length": 16,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "MEDICAL_CLAIMS": {
+    "file": "MEDICAL_CLAIMS.txt",
+    "record_length": 320,
+    "fields": [
+      {
+        "name": "Claim_ID",
+        "start": 1,
+        "length": 13,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "ICN",
+        "start": 14,
+        "length": 15,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Member_ID",
+        "start": 29,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicaid_ID",
+        "start": 39,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Billing_Provider_ID",
+        "start": 51,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Rendering_Provider_ID",
+        "start": 61,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Referring_Provider_ID",
+        "start": 71,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Claim_Type",
+        "start": 81,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Claim_Frequency_Code",
+        "start": 83,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Place_Of_Service",
+        "start": 84,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Type_Of_Bill",
+        "start": 86,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "From_DOS",
+        "start": 89,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "To_DOS",
+        "start": 97,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Admission_Date",
+        "start": 105,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Discharge_Date",
+        "start": 113,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Admission_Type",
+        "start": 121,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Admission_Source",
+        "start": 122,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Discharge_Status",
+        "start": 123,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Principal_Diagnosis_Code",
+        "start": 125,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Diagnosis_Code_2",
+        "start": 132,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Diagnosis_Code_3",
+        "start": 139,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Diagnosis_Code_4",
+        "start": 146,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Principal_Procedure_Code",
+        "start": 153,
+        "length": 5,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Procedure_Code_2",
+        "start": 158,
+        "length": 5,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Modifier_1",
+        "start": 163,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Modifier_2",
+        "start": 165,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Revenue_Code",
+        "start": 167,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "DRG_Code",
+        "start": 171,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Units",
+        "start": 174,
+        "length": 5,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Billed_Amount",
+        "start": 179,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Allowed_Amount",
+        "start": 190,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Paid_Amount",
+        "start": 201,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Patient_Responsibility_Amount",
+        "start": 212,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "TPL_Amount",
+        "start": 221,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "Claim_Status",
+        "start": 230,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Claim_Status_Date",
+        "start": 231,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Adjustment_Reason_Code",
+        "start": 239,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "EOB_Code",
+        "start": 243,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Received_Date",
+        "start": 247,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Processed_Date",
+        "start": 255,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Paid_Date",
+        "start": 263,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Check_EFT_Number",
+        "start": 271,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "COB_Indicator",
+        "start": 281,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Prior_Auth_Number",
+        "start": 282,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 294,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 302,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 305,
+        "length": 16,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "PHARMACY_CLAIMS": {
+    "file": "PHARMACY_CLAIMS.txt",
+    "record_length": 270,
+    "fields": [
+      {
+        "name": "Rx_Claim_ID",
+        "start": 1,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Member_ID",
+        "start": 13,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicaid_ID",
+        "start": 23,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Pharmacy_NPI",
+        "start": 35,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Pharmacy_NCPDP_ID",
+        "start": 45,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Prescriber_NPI",
+        "start": 52,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Prescriber_DEA",
+        "start": 62,
+        "length": 9,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "NDC_Code",
+        "start": 71,
+        "length": 11,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Drug_Name",
+        "start": 82,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Drug_Strength",
+        "start": 112,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Dosage_Form_Code",
+        "start": 122,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "GCN_Sequence_Number",
+        "start": 124,
+        "length": 6,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Therapeutic_Class_Code",
+        "start": 130,
+        "length": 6,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Fill_Date",
+        "start": 136,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Rx_Number",
+        "start": 144,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Refill_Number",
+        "start": 156,
+        "length": 2,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Days_Supply",
+        "start": 158,
+        "length": 3,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Quantity_Dispensed",
+        "start": 161,
+        "length": 8,
+        "kind": "9",
+        "decimals": 3,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(8,3)"
+      },
+      {
+        "name": "Ingredient_Cost",
+        "start": 169,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "Dispensing_Fee",
+        "start": 178,
+        "length": 7,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(7,2)"
+      },
+      {
+        "name": "Sales_Tax",
+        "start": 185,
+        "length": 6,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(6,2)"
+      },
+      {
+        "name": "Incentive_Fee",
+        "start": 191,
+        "length": 6,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(6,2)"
+      },
+      {
+        "name": "Copay_Amount",
+        "start": 197,
+        "length": 6,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(6,2)"
+      },
+      {
+        "name": "TPL_Amount",
+        "start": 203,
+        "length": 7,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(7,2)"
+      },
+      {
+        "name": "Paid_Amount",
+        "start": 210,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "DAW_Code",
+        "start": 219,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Compound_Code",
+        "start": 220,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Prior_Auth_Number",
+        "start": 221,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Claim_Status",
+        "start": 233,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Reversal_Indicator",
+        "start": 234,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Received_Date",
+        "start": 235,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Paid_Date",
+        "start": 243,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 251,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 259,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 262,
+        "length": 9,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "FINANCE": {
+    "file": "FINANCE.txt",
+    "record_length": 220,
+    "fields": [
+      {
+        "name": "Transaction_ID",
+        "start": 1,
+        "length": 14,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Claim_ID",
+        "start": 15,
+        "length": 13,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Member_ID",
+        "start": 28,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Provider_ID",
+        "start": 38,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Payee_ID",
+        "start": 48,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Transaction_Type",
+        "start": 58,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Transaction_Subtype",
+        "start": 60,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Transaction_Date",
+        "start": 63,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Posting_Date",
+        "start": 71,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Amount",
+        "start": 79,
+        "length": 12,
+        "kind": "S9",
+        "decimals": 2,
+        "signed": true,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Payment_Method_Code",
+        "start": 91,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Check_EFT_Number",
+        "start": 93,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Check_Date",
+        "start": 105,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Void_Indicator",
+        "start": 113,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Void_Date",
+        "start": 114,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "GL_Code",
+        "start": 122,
+        "length": 8,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Cost_Center",
+        "start": 130,
+        "length": 6,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Fund_Code",
+        "start": 136,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Fiscal_Year",
+        "start": 140,
+        "length": 4,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Fiscal_Period",
+        "start": 144,
+        "length": 2,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Batch_Number",
+        "start": 146,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Warrant_Number",
+        "start": 156,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Vendor_ID",
+        "start": 166,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Federal_Share_Amount",
+        "start": 176,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "State_Share_Amount",
+        "start": 187,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Recoupment_Reason_Code",
+        "start": 198,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 202,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 210,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 213,
+        "length": 8,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "PRIOR_AUTH": {
+    "file": "PRIOR_AUTH.txt",
+    "record_length": 180,
+    "fields": [
+      {
+        "name": "PA_ID",
+        "start": 1,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Member_ID",
+        "start": 13,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicaid_ID",
+        "start": 23,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Requesting_Provider_ID",
+        "start": 35,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Servicing_Provider_ID",
+        "start": 45,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Service_Type",
+        "start": 55,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "PA_Type",
+        "start": 58,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Diagnosis_Code_1",
+        "start": 60,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Diagnosis_Code_2",
+        "start": 67,
+        "length": 7,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Procedure_Code",
+        "start": 74,
+        "length": 5,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Modifier",
+        "start": 79,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Revenue_Code",
+        "start": 81,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "NDC_Code",
+        "start": 85,
+        "length": 11,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Requested_Units",
+        "start": 96,
+        "length": 5,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Approved_Units",
+        "start": 101,
+        "length": 5,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Requested_Date",
+        "start": 106,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Decision_Date",
+        "start": 114,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Decision_Status",
+        "start": 122,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Denial_Reason_Code",
+        "start": 123,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Review_Type",
+        "start": 127,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Urgency_Indicator",
+        "start": 129,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Start_Date",
+        "start": 130,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "End_Date",
+        "start": 138,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Extension_Indicator",
+        "start": 146,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Peer_Review_Indicator",
+        "start": 147,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Reviewer_ID",
+        "start": 148,
+        "length": 8,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 156,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 164,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 167,
+        "length": 14,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "TPL": {
+    "file": "TPL.txt",
+    "record_length": 230,
+    "fields": [
+      {
+        "name": "TPL_ID",
+        "start": 1,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Member_ID",
+        "start": 11,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Medicaid_ID",
+        "start": 21,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_Name",
+        "start": 33,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_Code",
+        "start": 63,
+        "length": 6,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_Address",
+        "start": 69,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_City",
+        "start": 99,
+        "length": 20,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_State",
+        "start": 119,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_Zip",
+        "start": 121,
+        "length": 9,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Carrier_Phone",
+        "start": 130,
+        "length": 10,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Policy_Number",
+        "start": 140,
+        "length": 15,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Group_Number",
+        "start": 155,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Subscriber_ID",
+        "start": 167,
+        "length": 12,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Relationship_Code",
+        "start": 179,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Coverage_Type",
+        "start": 181,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Plan_Type",
+        "start": 183,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Effective_Date",
+        "start": 186,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Term_Date",
+        "start": 194,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "COB_Indicator",
+        "start": 202,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Verification_Date",
+        "start": 203,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Verification_Source",
+        "start": 211,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Verification_Status",
+        "start": 214,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 215,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 223,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 226,
+        "length": 5,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "DRUG_REBATE": {
+    "file": "DRUG_REBATE.txt",
+    "record_length": 260,
+    "fields": [
+      {
+        "name": "Rebate_Record_ID",
+        "start": 1,
+        "length": 14,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "NDC_Code",
+        "start": 15,
+        "length": 11,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Drug_Name",
+        "start": 26,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Labeler_Code",
+        "start": 56,
+        "length": 5,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Manufacturer_Name",
+        "start": 61,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Rebate_Quarter",
+        "start": 91,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Rebate_Year",
+        "start": 92,
+        "length": 4,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Units_Reimbursed",
+        "start": 96,
+        "length": 12,
+        "kind": "9",
+        "decimals": 3,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(12,3)"
+      },
+      {
+        "name": "Number_Of_Prescriptions",
+        "start": 108,
+        "length": 7,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Total_Amount_Reimbursed",
+        "start": 115,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Ingredient_Cost_Paid",
+        "start": 126,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Dispensing_Fees_Paid",
+        "start": 137,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "AMP_Amount",
+        "start": 148,
+        "length": 9,
+        "kind": "9",
+        "decimals": 4,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,4)"
+      },
+      {
+        "name": "Best_Price_Amount",
+        "start": 157,
+        "length": 9,
+        "kind": "9",
+        "decimals": 4,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,4)"
+      },
+      {
+        "name": "URA_Amount",
+        "start": 166,
+        "length": 9,
+        "kind": "9",
+        "decimals": 4,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,4)"
+      },
+      {
+        "name": "CPI_Penalty_Amount",
+        "start": 175,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "Rebate_Amount_Invoiced",
+        "start": 184,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Rebate_Amount_Collected",
+        "start": 195,
+        "length": 11,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(11,2)"
+      },
+      {
+        "name": "Dispute_Indicator",
+        "start": 206,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Dispute_Reason_Code",
+        "start": 207,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Invoice_Date",
+        "start": 211,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Payment_Due_Date",
+        "start": 219,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Payment_Received_Date",
+        "start": 227,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Drug_Category_Code",
+        "start": 235,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Unit_Of_Measure",
+        "start": 236,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "State_Code",
+        "start": 238,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 240,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 248,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 251,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  },
+  "REFERENCE": {
+    "file": "REFERENCE.txt",
+    "record_length": 180,
+    "fields": [
+      {
+        "name": "Reference_Table_ID",
+        "start": 1,
+        "length": 6,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Code_Value",
+        "start": 7,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Short_Description",
+        "start": 17,
+        "length": 30,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Long_Description",
+        "start": 47,
+        "length": 60,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Code_Category",
+        "start": 107,
+        "length": 4,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Parent_Code",
+        "start": 111,
+        "length": 10,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Effective_Date",
+        "start": 121,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Termination_Date",
+        "start": 129,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Active_Indicator",
+        "start": 137,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Federal_Code_Indicator",
+        "start": 138,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "State_Specific_Indicator",
+        "start": 139,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Reimbursable_Indicator",
+        "start": 140,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Prior_Auth_Required_Indicator",
+        "start": 141,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Age_Restriction_Min",
+        "start": 142,
+        "length": 3,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Age_Restriction_Max",
+        "start": 145,
+        "length": 3,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Gender_Restriction",
+        "start": 148,
+        "length": 1,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Rate_Amount",
+        "start": 149,
+        "length": 9,
+        "kind": "9",
+        "decimals": 2,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "decimal(9,2)"
+      },
+      {
+        "name": "Unit_Of_Measure",
+        "start": 158,
+        "length": 2,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "Sort_Order",
+        "start": 160,
+        "length": 4,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "int"
+      },
+      {
+        "name": "Last_Update_Date",
+        "start": 164,
+        "length": 8,
+        "kind": "9",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "date"
+      },
+      {
+        "name": "Source_System_Code",
+        "start": 172,
+        "length": 3,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": false,
+        "spark_type": "string"
+      },
+      {
+        "name": "FILLER",
+        "start": 175,
+        "length": 6,
+        "kind": "X",
+        "decimals": 0,
+        "signed": false,
+        "is_filler": true,
+        "spark_type": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,360 @@
+================================================================================
+MEDICAID MAINFRAME EXTRACT - FIXED WIDTH RECORD LAYOUTS (COPYBOOK REFERENCE)
+Synthetic test data - for parser validation only. No real PII/PHI.
+Line terminator: CRLF. No header/trailer records. No column delimiters.
+Numeric fields (type 9) are zero-padded, right-justified.
+Signed fields (type S9) carry a SEPARATE LEADING SIGN byte (+/-), not overpunch.
+Alphanumeric fields (type X) are space-padded, left-justified.
+Dates are YYYYMMDD. 99999999 = open-ended / not applicable / pending.
+Each file contains 100 data records, no header or trailer rows.
+================================================================================
+
+--------------------------------------------------------------------------------
+FILE: MEMBER.txt    RECORD LENGTH: 380
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Member_ID                            1    10    10  X(10)      Internal member surrogate key
+Medicaid_ID                         11    22    12  X(12)      State-assigned Medicaid ID
+Case_Number                         23    32    10  X(10)      Eligibility case number
+SSN                                 33    41     9  9(9)       Social Security Number
+Last_Name                           42    61    20  X(20)      
+First_Name                          62    76    15  X(15)      
+Middle_Name                         77    91    15  X(15)      may be blank
+Name_Suffix                         92    95     4  X(4)       JR, SR, III etc, may be blank
+DOB                                 96   103     8  9(8)       YYYYMMDD
+Gender                             104   104     1  X(1)       M/F
+Race_Code                          105   106     2  X(2)       CMS race code 01-07
+Ethnicity_Code                     107   107     1  X(1)       H=Hispanic,N=Non-Hispanic,U=Unknown
+Marital_Status                     108   108     1  X(1)       M/S/D/W/U
+Address_Line1                      109   138    30  X(30)      
+Address_Line2                      139   158    20  X(20)      apt/unit, may be blank
+City                               159   178    20  X(20)      
+State                              179   180     2  X(2)       
+Zip                                181   189     9  9(9)       ZIP+4 no dash
+County_Code                        190   192     3  X(3)       
+Home_Phone                         193   202    10  9(10)      
+Cell_Phone                         203   212    10  9(10)      may be zero-filled if none on file
+Email                              213   252    40  X(40)      may be blank
+Preferred_Language                 253   255     3  X(3)       ISO-ish 3 char code
+Citizenship_Code                   256   256     1  X(1)       1=US Citizen,2=Qualified Alien,3=Non-Qualified
+Immigration_Status                 257   258     2  X(2)       may be blank if citizen
+Aid_Category                       259   261     3  X(3)       TAN,ABD,CHP,MAG,BCC,SSI,WRK
+Eligibility_Status                 262   262     1  X(1)       A=Active,I=Inactive,P=Pending
+Eligibility_Start                  263   270     8  9(8)       
+Eligibility_End                    271   278     8  9(8)       99999999 = open/active
+RE_Code                            279   282     4  X(4)       Rate/eligibility code for capitation
+MCO_Plan_ID                        283   290     8  X(8)       managed care plan enrollment, may be blank FFS
+PCP_Provider_ID                    291   300    10  X(10)      assigned PCP, may be blank
+LOC_Code                           301   302     2  X(2)       Level of Care code, blank if N/A
+Spenddown_Amount                   303   311     9  9(7)V9(2)  monthly spenddown liability
+Medicare_ID                        312   323    12  X(12)      blank if not dual eligible
+Medicare_Part_A_Ind                324   324     1  X(1)       Y/N
+Medicare_Part_B_Ind                325   325     1  X(1)       Y/N
+Medicare_Part_D_Ind                326   326     1  X(1)       Y/N
+Dual_Eligible_Code                 327   328     2  X(2)       00=Not dual,01-08=dual category
+Institutional_Status               329   329     1  X(1)       Y/N nursing facility resident
+Waiver_Program_Code                330   332     3  X(3)       HCB,DDW,MFP,TBI, or NA
+Caseworker_ID                      333   340     8  X(8)       may be blank
+Household_Size                     341   342     2  9(2)       
+FPL_Percent                        343   345     3  9(3)       % of federal poverty level
+Deceased_Indicator                 346   346     1  X(1)       Y/N
+Death_Date                         347   354     8  9(8)       99999999 if not deceased
+Last_Update_Date                   355   362     8  9(8)       
+Source_System_Code                 363   365     3  X(3)       MMS/GEN/LEG
+FILLER                             366   380    15  X(15)      
+
+--------------------------------------------------------------------------------
+FILE: PROVIDER.txt    RECORD LENGTH: 400
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Provider_ID                          1    10    10  X(10)      
+NPI                                 11    20    10  9(10)      
+Legacy_Provider_ID                  21    30    10  X(10)      pre-conversion legacy ID, may be blank
+Provider_Name                       31    65    35  X(35)      
+DBA_Name                            66   100    35  X(35)      doing-business-as, may be blank
+Provider_Type                      101   102     2  X(2)       01=Individual,02=Group,03=Facility
+Provider_Category                  103   105     3  X(3)       PHY,HSP,DEN,BHV,DME,LTC,AMB,LAB
+Specialty_Code_1                   106   109     4  X(4)       
+Specialty_Code_2                   110   113     4  X(4)       secondary specialty, may be blank
+Taxonomy_Code                      114   123    10  X(10)      NUCC taxonomy code
+Tax_ID                             124   132     9  9(9)       
+SSN                                133   141     9  9(9)       individual providers only, zero-filled for orgs
+License_Number                     142   156    15  X(15)      may be blank for facilities
+License_State                      157   158     2  X(2)       
+DEA_Number                         159   167     9  X(9)       blank if non-prescriber
+Address_Line1                      168   197    30  X(30)      
+Address_Line2                      198   217    20  X(20)      may be blank
+City                               218   237    20  X(20)      
+State                              238   239     2  X(2)       
+Zip                                240   248     9  9(9)       
+County_Code                        249   251     3  X(3)       
+Phone                              252   261    10  9(10)      
+Fax                                262   271    10  9(10)      zero-filled if none
+Email                              272   311    40  X(40)      may be blank
+Billing_NPI                        312   321    10  9(10)      often same as NPI
+Group_Affiliation_ID               322   331    10  X(10)      blank for solo practitioners
+Enrollment_Date                    332   339     8  9(8)       
+Revalidation_Date                  340   347     8  9(8)       next required revalidation
+Termination_Date                   348   355     8  9(8)       99999999 if active
+Status                             356   356     1  X(1)       A=Active,T=Terminated,P=Pending
+Medicaid_Participation_Ind         357   357     1  X(1)       Y/N
+Medicare_Participation_Ind         358   358     1  X(1)       Y/N
+Ownership_Type                     359   360     2  X(2)       IN,PT,NP,GV
+Accreditation_Code                 361   364     4  X(4)       JC01,NCQA,CARF,AAAH,NONE
+Site_Of_Service_Code               365   366     2  X(2)       POS default for this provider
+Panel_Capacity                     367   370     4  9(4)       PCP max panel size, zero if N/A
+Language_Spoken                    371   373     3  X(3)       primary language of provider
+Last_Update_Date                   374   381     8  9(8)       
+Source_System_Code                 382   384     3  X(3)       
+FILLER                             385   400    16  X(16)      
+
+--------------------------------------------------------------------------------
+FILE: MEDICAL_CLAIMS.txt    RECORD LENGTH: 320
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Claim_ID                             1    13    13  X(13)      
+ICN                                 14    28    15  X(15)      Internal Control Number
+Member_ID                           29    38    10  X(10)      
+Medicaid_ID                         39    50    12  X(12)      
+Billing_Provider_ID                 51    60    10  X(10)      
+Rendering_Provider_ID               61    70    10  X(10)      
+Referring_Provider_ID               71    80    10  X(10)      may be blank
+Claim_Type                          81    82     2  X(2)       IP,OP,PR,ER
+Claim_Frequency_Code                83    83     1  X(1)       1=Original,7=Replacement,8=Void
+Place_Of_Service                    84    85     2  X(2)       
+Type_Of_Bill                        86    88     3  X(3)       institutional only, blank for professional
+From_DOS                            89    96     8  9(8)       
+To_DOS                              97   104     8  9(8)       
+Admission_Date                     105   112     8  9(8)       99999999 if not inpatient
+Discharge_Date                     113   120     8  9(8)       99999999 if not inpatient/not yet discharged
+Admission_Type                     121   121     1  X(1)       blank if N/A
+Admission_Source                   122   122     1  X(1)       blank if N/A
+Discharge_Status                   123   124     2  X(2)       blank if N/A
+Principal_Diagnosis_Code           125   131     7  X(7)       
+Diagnosis_Code_2                   132   138     7  X(7)       may be blank
+Diagnosis_Code_3                   139   145     7  X(7)       may be blank
+Diagnosis_Code_4                   146   152     7  X(7)       may be blank
+Principal_Procedure_Code           153   157     5  X(5)       
+Procedure_Code_2                   158   162     5  X(5)       may be blank
+Modifier_1                         163   164     2  X(2)       may be blank
+Modifier_2                         165   166     2  X(2)       may be blank
+Revenue_Code                       167   170     4  X(4)       institutional only, blank for professional
+DRG_Code                           171   173     3  X(3)       inpatient only, blank otherwise
+Units                              174   178     5  9(5)       
+Billed_Amount                      179   189    11  9(9)V9(2)  
+Allowed_Amount                     190   200    11  9(9)V9(2)  
+Paid_Amount                        201   211    11  9(9)V9(2)  
+Patient_Responsibility_Amount      212   220     9  9(7)V9(2)  
+TPL_Amount                         221   229     9  9(7)V9(2)  amount paid by other insurance
+Claim_Status                       230   230     1  X(1)       P=Paid,D=Denied,S=Suspended,R=Reversed
+Claim_Status_Date                  231   238     8  9(8)       
+Adjustment_Reason_Code             239   242     4  X(4)       CARC code, blank if paid in full
+EOB_Code                           243   246     4  X(4)       explanation of benefits code
+Received_Date                      247   254     8  9(8)       
+Processed_Date                     255   262     8  9(8)       
+Paid_Date                          263   270     8  9(8)       99999999 if not yet paid
+Check_EFT_Number                   271   280    10  X(10)      blank until paid
+COB_Indicator                      281   281     1  X(1)       Y/N other coverage exists
+Prior_Auth_Number                  282   293    12  X(12)      blank if no PA required/on file
+Last_Update_Date                   294   301     8  9(8)       
+Source_System_Code                 302   304     3  X(3)       
+FILLER                             305   320    16  X(16)      
+
+--------------------------------------------------------------------------------
+FILE: PHARMACY_CLAIMS.txt    RECORD LENGTH: 270
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Rx_Claim_ID                          1    12    12  X(12)      
+Member_ID                           13    22    10  X(10)      
+Medicaid_ID                         23    34    12  X(12)      
+Pharmacy_NPI                        35    44    10  9(10)      
+Pharmacy_NCPDP_ID                   45    51     7  X(7)       
+Prescriber_NPI                      52    61    10  9(10)      
+Prescriber_DEA                      62    70     9  X(9)       
+NDC_Code                            71    81    11  X(11)      
+Drug_Name                           82   111    30  X(30)      
+Drug_Strength                      112   121    10  X(10)      
+Dosage_Form_Code                   122   123     2  X(2)       
+GCN_Sequence_Number                124   129     6  X(6)       generic code number sequence
+Therapeutic_Class_Code             130   135     6  X(6)       GPI/therapeutic class
+Fill_Date                          136   143     8  9(8)       
+Rx_Number                          144   155    12  X(12)      
+Refill_Number                      156   157     2  9(2)       0 = original fill
+Days_Supply                        158   160     3  9(3)       
+Quantity_Dispensed                 161   168     8  9(5)V9(3)  
+Ingredient_Cost                    169   177     9  9(7)V9(2)  
+Dispensing_Fee                     178   184     7  9(5)V9(2)  
+Sales_Tax                          185   190     6  9(4)V9(2)  
+Incentive_Fee                      191   196     6  9(4)V9(2)  
+Copay_Amount                       197   202     6  9(4)V9(2)  
+TPL_Amount                         203   209     7  9(5)V9(2)  
+Paid_Amount                        210   218     9  9(7)V9(2)  
+DAW_Code                           219   219     1  X(1)       0-9 dispense as written
+Compound_Code                      220   220     1  X(1)       1=Not a compound,2=Compound
+Prior_Auth_Number                  221   232    12  X(12)      blank if not required
+Claim_Status                       233   233     1  X(1)       P=Paid,D=Denied,R=Reversed
+Reversal_Indicator                 234   234     1  X(1)       Y/N
+Received_Date                      235   242     8  9(8)       
+Paid_Date                          243   250     8  9(8)       99999999 if not paid
+Last_Update_Date                   251   258     8  9(8)       
+Source_System_Code                 259   261     3  X(3)       
+FILLER                             262   270     9  X(9)       
+
+--------------------------------------------------------------------------------
+FILE: FINANCE.txt    RECORD LENGTH: 220
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Transaction_ID                       1    14    14  X(14)      
+Claim_ID                            15    27    13  X(13)      blank for non-claim transactions e.g. capitation
+Member_ID                           28    37    10  X(10)      blank for provider-level transactions
+Provider_ID                         38    47    10  X(10)      
+Payee_ID                            48    57    10  X(10)      often same as Provider_ID
+Transaction_Type                    58    59     2  X(2)       PY,RC,AJ,CP,VD
+Transaction_Subtype                 60    62     3  X(3)       
+Transaction_Date                    63    70     8  9(8)       
+Posting_Date                        71    78     8  9(8)       
+Amount                              79    90    12  S9(9)V9(2) LEAD-SEP leading sign + 9 int + 2 dec
+Payment_Method_Code                 91    92     2  X(2)       EF=EFT,CK=Check,WR=Warrant
+Check_EFT_Number                    93   104    12  X(12)      
+Check_Date                         105   112     8  9(8)       99999999 if not yet issued
+Void_Indicator                     113   113     1  X(1)       Y/N
+Void_Date                          114   121     8  9(8)       99999999 if not voided
+GL_Code                            122   129     8  X(8)       
+Cost_Center                        130   135     6  X(6)       
+Fund_Code                          136   139     4  X(4)       
+Fiscal_Year                        140   143     4  9(4)       
+Fiscal_Period                      144   145     2  9(2)       
+Batch_Number                       146   155    10  X(10)      
+Warrant_Number                     156   165    10  X(10)      blank unless state warrant issued
+Vendor_ID                          166   175    10  X(10)      
+Federal_Share_Amount               176   186    11  9(9)V9(2)  FMAP federal portion
+State_Share_Amount                 187   197    11  9(9)V9(2)  
+Recoupment_Reason_Code             198   201     4  X(4)       blank unless Transaction_Type=RC
+Last_Update_Date                   202   209     8  9(8)       
+Source_System_Code                 210   212     3  X(3)       
+FILLER                             213   220     8  X(8)       
+
+--------------------------------------------------------------------------------
+FILE: PRIOR_AUTH.txt    RECORD LENGTH: 180
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+PA_ID                                1    12    12  X(12)      
+Member_ID                           13    22    10  X(10)      
+Medicaid_ID                         23    34    12  X(12)      
+Requesting_Provider_ID              35    44    10  X(10)      
+Servicing_Provider_ID               45    54    10  X(10)      
+Service_Type                        55    57     3  X(3)       IP,OP,DME,RX,BH
+PA_Type                             58    59     2  X(2)       01=Initial,02=Extension,03=Retro
+Diagnosis_Code_1                    60    66     7  X(7)       
+Diagnosis_Code_2                    67    73     7  X(7)       may be blank
+Procedure_Code                      74    78     5  X(5)       may be blank for RX/DME by NDC
+Modifier                            79    80     2  X(2)       may be blank
+Revenue_Code                        81    84     4  X(4)       institutional only, may be blank
+NDC_Code                            85    95    11  X(11)      pharmacy PAs only, blank otherwise
+Requested_Units                     96   100     5  9(5)       
+Approved_Units                     101   105     5  9(5)       0 if denied
+Requested_Date                     106   113     8  9(8)       
+Decision_Date                      114   121     8  9(8)       99999999 if pending
+Decision_Status                    122   122     1  X(1)       A=Approved,D=Denied,P=Pending,R=Partial
+Denial_Reason_Code                 123   126     4  X(4)       blank unless denied/partial
+Review_Type                        127   128     2  X(2)       PR=Prospective,CR=Concurrent,RE=Retro
+Urgency_Indicator                  129   129     1  X(1)       Y/N expedited review
+Start_Date                         130   137     8  9(8)       99999999 if N/A
+End_Date                           138   145     8  9(8)       99999999 if N/A
+Extension_Indicator                146   146     1  X(1)       Y/N this is an extension of a prior PA
+Peer_Review_Indicator              147   147     1  X(1)       Y/N required physician peer review
+Reviewer_ID                        148   155     8  X(8)       clinical reviewer, may be blank if auto-adjudicated
+Last_Update_Date                   156   163     8  9(8)       
+Source_System_Code                 164   166     3  X(3)       
+FILLER                             167   180    14  X(14)      
+
+--------------------------------------------------------------------------------
+FILE: TPL.txt    RECORD LENGTH: 230
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+TPL_ID                               1    10    10  X(10)      
+Member_ID                           11    20    10  X(10)      
+Medicaid_ID                         21    32    12  X(12)      
+Carrier_Name                        33    62    30  X(30)      may be blank if carrier unresolved
+Carrier_Code                        63    68     6  X(6)       
+Carrier_Address                     69    98    30  X(30)      may be blank
+Carrier_City                        99   118    20  X(20)      may be blank
+Carrier_State                      119   120     2  X(2)       may be blank
+Carrier_Zip                        121   129     9  9(9)       zero-filled if unknown
+Carrier_Phone                      130   139    10  9(10)      zero-filled if unknown
+Policy_Number                      140   154    15  X(15)      may be blank if unresolved
+Group_Number                       155   166    12  X(12)      may be blank
+Subscriber_ID                      167   178    12  X(12)      may differ from member if dependent
+Relationship_Code                  179   180     2  X(2)       01=Self,18=Spouse,19=Child,20=Other
+Coverage_Type                      181   182     2  X(2)       CI,MC,LI,WC,MD,HM
+Plan_Type                          183   185     3  X(3)       PPO,HMO,EPO,POS,FFS
+Effective_Date                     186   193     8  9(8)       
+Term_Date                          194   201     8  9(8)       99999999 if active/open
+COB_Indicator                      202   202     1  X(1)       Y/N
+Verification_Date                  203   210     8  9(8)       99999999 if never verified
+Verification_Source                211   213     3  X(3)       e.g. MCV=Match/Contractor Verification
+Verification_Status                214   214     1  X(1)       V=Verified,U=Unverified,D=Disputed
+Last_Update_Date                   215   222     8  9(8)       
+Source_System_Code                 223   225     3  X(3)       
+FILLER                             226   230     5  X(5)       
+
+--------------------------------------------------------------------------------
+FILE: DRUG_REBATE.txt    RECORD LENGTH: 260
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Rebate_Record_ID                     1    14    14  X(14)      
+NDC_Code                            15    25    11  X(11)      
+Drug_Name                           26    55    30  X(30)      
+Labeler_Code                        56    60     5  X(5)       first 5 digits of NDC = manufacturer
+Manufacturer_Name                   61    90    30  X(30)      
+Rebate_Quarter                      91    91     1  X(1)       1-4
+Rebate_Year                         92    95     4  9(4)       
+Units_Reimbursed                    96   107    12  9(9)V9(3)  
+Number_Of_Prescriptions            108   114     7  9(7)       
+Total_Amount_Reimbursed            115   125    11  9(9)V9(2)  
+Ingredient_Cost_Paid               126   136    11  9(9)V9(2)  
+Dispensing_Fees_Paid               137   147    11  9(9)V9(2)  
+AMP_Amount                         148   156     9  9(5)V9(4)  Average Manufacturer Price per unit
+Best_Price_Amount                  157   165     9  9(5)V9(4)  
+URA_Amount                         166   174     9  9(5)V9(4)  Unit Rebate Amount per CMS formula
+CPI_Penalty_Amount                 175   183     9  9(7)V9(2)  additional rebate for price growth > CPI-U
+Rebate_Amount_Invoiced             184   194    11  9(9)V9(2)  
+Rebate_Amount_Collected            195   205    11  9(9)V9(2)  
+Dispute_Indicator                  206   206     1  X(1)       Y/N manufacturer disputed invoice
+Dispute_Reason_Code                207   210     4  X(4)       blank unless disputed
+Invoice_Date                       211   218     8  9(8)       
+Payment_Due_Date                   219   226     8  9(8)       
+Payment_Received_Date              227   234     8  9(8)       99999999 if not yet received
+Drug_Category_Code                 235   235     1  X(1)       S=Single source,I=Innovator multi,N=Non-innovator
+Unit_Of_Measure                    236   237     2  X(2)       EA,ML,GM,UN,BX
+State_Code                         238   239     2  X(2)       
+Last_Update_Date                   240   247     8  9(8)       
+Source_System_Code                 248   250     3  X(3)       
+FILLER                             251   260    10  X(10)      
+
+--------------------------------------------------------------------------------
+FILE: REFERENCE.txt    RECORD LENGTH: 180
+--------------------------------------------------------------------------------
+FIELD NAME                       START   END   LEN  TYPE       NOTES
+Reference_Table_ID                   1     6     6  X(6)       which code table this row belongs to
+Code_Value                           7    16    10  X(10)      
+Short_Description                   17    46    30  X(30)      
+Long_Description                    47   106    60  X(60)      
+Code_Category                      107   110     4  X(4)       grouping within table, may be blank
+Parent_Code                        111   120    10  X(10)      for hierarchical codes, may be blank
+Effective_Date                     121   128     8  9(8)       
+Termination_Date                   129   136     8  9(8)       99999999 if active
+Active_Indicator                   137   137     1  X(1)       Y/N
+Federal_Code_Indicator             138   138     1  X(1)       Y/N federally-defined code
+State_Specific_Indicator           139   139     1  X(1)       Y/N
+Reimbursable_Indicator             140   140     1  X(1)       Y/N, applicable to procedure/revenue codes
+Prior_Auth_Required_Indicator      141   141     1  X(1)       Y/N
+Age_Restriction_Min                142   144     3  9(3)       0 if none
+Age_Restriction_Max                145   147     3  9(3)       999 if none
+Gender_Restriction                 148   148     1  X(1)       M/F/blank=none
+Rate_Amount                        149   157     9  9(7)V9(2)  fee schedule amount if applicable
+Unit_Of_Measure                    158   159     2  X(2)       blank if N/A
+Sort_Order                         160   163     4  9(4)       
+Last_Update_Date                   164   171     8  9(8)       
+Source_System_Code                 172   174     3  X(3)       
+FILLER                             175   180     6  X(6)       

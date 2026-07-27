@@ -1,0 +1,27 @@
+# Databricks Asset Bundle for the Medicaid fixed-width -> Delta ingestion job.
+#
+# Deploy / run:
+#   databricks bundle validate -t dev
+#   databricks bundle deploy   -t dev
+#   databricks bundle run     -t dev medicaid_fixedwidth_ingestion
+#
+# Adjust workspace host, Volume paths, and cluster sizing for your
+# environment before deploying -- the values here are placeholders.
+
+bundle:
+  name: medicaid_fixedwidth_ingestion
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://<your-workspace-host>.azuredatabricks.net   # <-- update
+  prod:
+    mode: production
+    workspace:
+      host: https://<your-workspace-host>.azuredatabricks.net   # <-- update
+      root_path: /Shared/.bundle/${bundle.name}/${bundle.target}

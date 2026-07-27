@@ -1,0 +1,142 @@
+# Job definition: 9 independent tasks (one per domain) share a single
+# job cluster and all run in parallel. This job's only responsibility is
+# parse-and-load into Bronze -- one typed table per domain. Silver and
+# Gold already exist and are out of scope for this job; mapping Bronze
+# into the existing Silver tables is a separate, later job.
+#
+# Each task points at the same notebook (src/fixedwidth_to_delta.py) and
+# just varies the widget parameters in base_parameters.
+
+resources:
+  jobs:
+    medicaid_fixedwidth_ingestion:
+      name: medicaid_fixedwidth_ingestion
+
+      job_clusters:
+        - job_cluster_key: ingestion_cluster
+          new_cluster:
+            spark_version: "15.4.x-scala2.12"
+            node_type_id: "Standard_DS3_v2"   # <-- adjust for your cloud/workspace
+            num_workers: 2
+            data_security_mode: "SINGLE_USER"
+
+      parameters:
+        - name: target_catalog
+          default: main
+        - name: target_schema
+          default: medicaid_bronze
+        - name: raw_volume_path
+          default: /Volumes/main/medicaid_landing/raw
+        - name: catalog_path
+          default: /Volumes/main/medicaid_landing/config/layout_catalog.json
+        - name: write_mode
+          default: overwrite
+
+      tasks:
+        - task_key: member
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: MEMBER
+              input_path: "{{job.parameters.raw_volume_path}}/MEMBER.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: provider
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: PROVIDER
+              input_path: "{{job.parameters.raw_volume_path}}/PROVIDER.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: medical_claims
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: MEDICAL_CLAIMS
+              input_path: "{{job.parameters.raw_volume_path}}/MEDICAL_CLAIMS.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: pharmacy_claims
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: PHARMACY_CLAIMS
+              input_path: "{{job.parameters.raw_volume_path}}/PHARMACY_CLAIMS.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: finance
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: FINANCE
+              input_path: "{{job.parameters.raw_volume_path}}/FINANCE.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: prior_auth
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: PRIOR_AUTH
+              input_path: "{{job.parameters.raw_volume_path}}/PRIOR_AUTH.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: tpl
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: TPL
+              input_path: "{{job.parameters.raw_volume_path}}/TPL.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: drug_rebate
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: DRUG_REBATE
+              input_path: "{{job.parameters.raw_volume_path}}/DRUG_REBATE.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"
+
+        - task_key: reference
+          job_cluster_key: ingestion_cluster
+          notebook_task:
+            notebook_path: ../src/fixedwidth_to_delta
+            base_parameters:
+              domain: REFERENCE
+              input_path: "{{job.parameters.raw_volume_path}}/REFERENCE.txt"
+              catalog_path: "{{job.parameters.catalog_path}}"
+              target_catalog: "{{job.parameters.target_catalog}}"
+              target_schema: "{{job.parameters.target_schema}}"
+              write_mode: "{{job.parameters.write_mode}}"

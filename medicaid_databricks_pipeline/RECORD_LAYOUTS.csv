@@ -1,0 +1,306 @@
+Domain,File_Name,Record_Length,Field_Order,Field_Name,Start_Position,End_Position,Length,COBOL_PIC,COBOL_Kind,Decimal_Places,Signed,Target_Spark_Type,Is_Filler,Description
+MEMBER,MEMBER.txt,380,1,Member_ID,1,10,10,X(10),X,0,N,string,N,Internal member surrogate key
+MEMBER,MEMBER.txt,380,2,Medicaid_ID,11,22,12,X(12),X,0,N,string,N,State-assigned Medicaid ID
+MEMBER,MEMBER.txt,380,3,Case_Number,23,32,10,X(10),X,0,N,string,N,Eligibility case number
+MEMBER,MEMBER.txt,380,4,SSN,33,41,9,9(9),9,0,N,string,N,Social Security Number
+MEMBER,MEMBER.txt,380,5,Last_Name,42,61,20,X(20),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEMBER,MEMBER.txt,380,6,First_Name,62,76,15,X(15),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEMBER,MEMBER.txt,380,7,Middle_Name,77,91,15,X(15),X,0,N,string,N,may be blank
+MEMBER,MEMBER.txt,380,8,Name_Suffix,92,95,4,X(4),X,0,N,string,N,"JR, SR, III etc, may be blank"
+MEMBER,MEMBER.txt,380,9,DOB,96,103,8,9(8),9,0,N,date,N,"YYYYMMDD. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEMBER,MEMBER.txt,380,10,Gender,104,104,1,X(1),X,0,N,string,N,M/F
+MEMBER,MEMBER.txt,380,11,Race_Code,105,106,2,X(2),X,0,N,string,N,CMS race code 01-07
+MEMBER,MEMBER.txt,380,12,Ethnicity_Code,107,107,1,X(1),X,0,N,string,N,"H=Hispanic,N=Non-Hispanic,U=Unknown"
+MEMBER,MEMBER.txt,380,13,Marital_Status,108,108,1,X(1),X,0,N,string,N,M/S/D/W/U
+MEMBER,MEMBER.txt,380,14,Address_Line1,109,138,30,X(30),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEMBER,MEMBER.txt,380,15,Address_Line2,139,158,20,X(20),X,0,N,string,N,"apt/unit, may be blank"
+MEMBER,MEMBER.txt,380,16,City,159,178,20,X(20),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEMBER,MEMBER.txt,380,17,State,179,180,2,X(2),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEMBER,MEMBER.txt,380,18,Zip,181,189,9,9(9),9,0,N,string,N,ZIP+4 no dash
+MEMBER,MEMBER.txt,380,19,County_Code,190,192,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEMBER,MEMBER.txt,380,20,Home_Phone,193,202,10,9(10),9,0,N,string,N,Zero-padded unsigned numeric value.
+MEMBER,MEMBER.txt,380,21,Cell_Phone,203,212,10,9(10),9,0,N,string,N,may be zero-filled if none on file
+MEMBER,MEMBER.txt,380,22,Email,213,252,40,X(40),X,0,N,string,N,may be blank
+MEMBER,MEMBER.txt,380,23,Preferred_Language,253,255,3,X(3),X,0,N,string,N,ISO-ish 3 char code
+MEMBER,MEMBER.txt,380,24,Citizenship_Code,256,256,1,X(1),X,0,N,string,N,"1=US Citizen,2=Qualified Alien,3=Non-Qualified"
+MEMBER,MEMBER.txt,380,25,Immigration_Status,257,258,2,X(2),X,0,N,string,N,may be blank if citizen
+MEMBER,MEMBER.txt,380,26,Aid_Category,259,261,3,X(3),X,0,N,string,N,"TAN,ABD,CHP,MAG,BCC,SSI,WRK"
+MEMBER,MEMBER.txt,380,27,Eligibility_Status,262,262,1,X(1),X,0,N,string,N,"A=Active,I=Inactive,P=Pending"
+MEMBER,MEMBER.txt,380,28,Eligibility_Start,263,270,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEMBER,MEMBER.txt,380,29,Eligibility_End,271,278,8,9(8),9,0,N,date,N,"99999999 = open/active. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEMBER,MEMBER.txt,380,30,RE_Code,279,282,4,X(4),X,0,N,string,N,Rate/eligibility code for capitation
+MEMBER,MEMBER.txt,380,31,MCO_Plan_ID,283,290,8,X(8),X,0,N,string,N,"managed care plan enrollment, may be blank FFS"
+MEMBER,MEMBER.txt,380,32,PCP_Provider_ID,291,300,10,X(10),X,0,N,string,N,"assigned PCP, may be blank"
+MEMBER,MEMBER.txt,380,33,LOC_Code,301,302,2,X(2),X,0,N,string,N,"Level of Care code, blank if N/A"
+MEMBER,MEMBER.txt,380,34,Spenddown_Amount,303,311,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,monthly spenddown liability. 2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+MEMBER,MEMBER.txt,380,35,Medicare_ID,312,323,12,X(12),X,0,N,string,N,blank if not dual eligible
+MEMBER,MEMBER.txt,380,36,Medicare_Part_A_Ind,324,324,1,X(1),X,0,N,string,N,Y/N
+MEMBER,MEMBER.txt,380,37,Medicare_Part_B_Ind,325,325,1,X(1),X,0,N,string,N,Y/N
+MEMBER,MEMBER.txt,380,38,Medicare_Part_D_Ind,326,326,1,X(1),X,0,N,string,N,Y/N
+MEMBER,MEMBER.txt,380,39,Dual_Eligible_Code,327,328,2,X(2),X,0,N,string,N,"00=Not dual,01-08=dual category"
+MEMBER,MEMBER.txt,380,40,Institutional_Status,329,329,1,X(1),X,0,N,string,N,Y/N nursing facility resident
+MEMBER,MEMBER.txt,380,41,Waiver_Program_Code,330,332,3,X(3),X,0,N,string,N,"HCB,DDW,MFP,TBI, or NA"
+MEMBER,MEMBER.txt,380,42,Caseworker_ID,333,340,8,X(8),X,0,N,string,N,may be blank
+MEMBER,MEMBER.txt,380,43,Household_Size,341,342,2,9(2),9,0,N,int,N,Zero-padded unsigned numeric value.
+MEMBER,MEMBER.txt,380,44,FPL_Percent,343,345,3,9(3),9,0,N,int,N,% of federal poverty level
+MEMBER,MEMBER.txt,380,45,Deceased_Indicator,346,346,1,X(1),X,0,N,string,N,Y/N
+MEMBER,MEMBER.txt,380,46,Death_Date,347,354,8,9(8),9,0,N,date,N,"99999999 if not deceased. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEMBER,MEMBER.txt,380,47,Last_Update_Date,355,362,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEMBER,MEMBER.txt,380,48,Source_System_Code,363,365,3,X(3),X,0,N,string,N,MMS/GEN/LEG
+MEMBER,MEMBER.txt,380,49,FILLER,366,380,15,X(15),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+PROVIDER,PROVIDER.txt,400,1,Provider_ID,1,10,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,2,NPI,11,20,10,9(10),9,0,N,string,N,Zero-padded unsigned numeric value.
+PROVIDER,PROVIDER.txt,400,3,Legacy_Provider_ID,21,30,10,X(10),X,0,N,string,N,"pre-conversion legacy ID, may be blank"
+PROVIDER,PROVIDER.txt,400,4,Provider_Name,31,65,35,X(35),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,5,DBA_Name,66,100,35,X(35),X,0,N,string,N,"doing-business-as, may be blank"
+PROVIDER,PROVIDER.txt,400,6,Provider_Type,101,102,2,X(2),X,0,N,string,N,"01=Individual,02=Group,03=Facility"
+PROVIDER,PROVIDER.txt,400,7,Provider_Category,103,105,3,X(3),X,0,N,string,N,"PHY,HSP,DEN,BHV,DME,LTC,AMB,LAB"
+PROVIDER,PROVIDER.txt,400,8,Specialty_Code_1,106,109,4,X(4),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,9,Specialty_Code_2,110,113,4,X(4),X,0,N,string,N,"secondary specialty, may be blank"
+PROVIDER,PROVIDER.txt,400,10,Taxonomy_Code,114,123,10,X(10),X,0,N,string,N,NUCC taxonomy code
+PROVIDER,PROVIDER.txt,400,11,Tax_ID,124,132,9,9(9),9,0,N,string,N,Zero-padded unsigned numeric value.
+PROVIDER,PROVIDER.txt,400,12,SSN,133,141,9,9(9),9,0,N,string,N,"individual providers only, zero-filled for orgs"
+PROVIDER,PROVIDER.txt,400,13,License_Number,142,156,15,X(15),X,0,N,string,N,may be blank for facilities
+PROVIDER,PROVIDER.txt,400,14,License_State,157,158,2,X(2),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,15,DEA_Number,159,167,9,X(9),X,0,N,string,N,blank if non-prescriber
+PROVIDER,PROVIDER.txt,400,16,Address_Line1,168,197,30,X(30),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,17,Address_Line2,198,217,20,X(20),X,0,N,string,N,may be blank
+PROVIDER,PROVIDER.txt,400,18,City,218,237,20,X(20),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,19,State,238,239,2,X(2),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,20,Zip,240,248,9,9(9),9,0,N,string,N,Zero-padded unsigned numeric value.
+PROVIDER,PROVIDER.txt,400,21,County_Code,249,251,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,22,Phone,252,261,10,9(10),9,0,N,string,N,Zero-padded unsigned numeric value.
+PROVIDER,PROVIDER.txt,400,23,Fax,262,271,10,9(10),9,0,N,string,N,zero-filled if none
+PROVIDER,PROVIDER.txt,400,24,Email,272,311,40,X(40),X,0,N,string,N,may be blank
+PROVIDER,PROVIDER.txt,400,25,Billing_NPI,312,321,10,9(10),9,0,N,string,N,often same as NPI
+PROVIDER,PROVIDER.txt,400,26,Group_Affiliation_ID,322,331,10,X(10),X,0,N,string,N,blank for solo practitioners
+PROVIDER,PROVIDER.txt,400,27,Enrollment_Date,332,339,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PROVIDER,PROVIDER.txt,400,28,Revalidation_Date,340,347,8,9(8),9,0,N,date,N,"next required revalidation. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PROVIDER,PROVIDER.txt,400,29,Termination_Date,348,355,8,9(8),9,0,N,date,N,"99999999 if active. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PROVIDER,PROVIDER.txt,400,30,Status,356,356,1,X(1),X,0,N,string,N,"A=Active,T=Terminated,P=Pending"
+PROVIDER,PROVIDER.txt,400,31,Medicaid_Participation_Ind,357,357,1,X(1),X,0,N,string,N,Y/N
+PROVIDER,PROVIDER.txt,400,32,Medicare_Participation_Ind,358,358,1,X(1),X,0,N,string,N,Y/N
+PROVIDER,PROVIDER.txt,400,33,Ownership_Type,359,360,2,X(2),X,0,N,string,N,"IN,PT,NP,GV"
+PROVIDER,PROVIDER.txt,400,34,Accreditation_Code,361,364,4,X(4),X,0,N,string,N,"JC01,NCQA,CARF,AAAH,NONE"
+PROVIDER,PROVIDER.txt,400,35,Site_Of_Service_Code,365,366,2,X(2),X,0,N,string,N,POS default for this provider
+PROVIDER,PROVIDER.txt,400,36,Panel_Capacity,367,370,4,9(4),9,0,N,int,N,"PCP max panel size, zero if N/A"
+PROVIDER,PROVIDER.txt,400,37,Language_Spoken,371,373,3,X(3),X,0,N,string,N,primary language of provider
+PROVIDER,PROVIDER.txt,400,38,Last_Update_Date,374,381,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PROVIDER,PROVIDER.txt,400,39,Source_System_Code,382,384,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+PROVIDER,PROVIDER.txt,400,40,FILLER,385,400,16,X(16),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,1,Claim_ID,1,13,13,X(13),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,2,ICN,14,28,15,X(15),X,0,N,string,N,Internal Control Number
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,3,Member_ID,29,38,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,4,Medicaid_ID,39,50,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,5,Billing_Provider_ID,51,60,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,6,Rendering_Provider_ID,61,70,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,7,Referring_Provider_ID,71,80,10,X(10),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,8,Claim_Type,81,82,2,X(2),X,0,N,string,N,"IP,OP,PR,ER"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,9,Claim_Frequency_Code,83,83,1,X(1),X,0,N,string,N,"1=Original,7=Replacement,8=Void"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,10,Place_Of_Service,84,85,2,X(2),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,11,Type_Of_Bill,86,88,3,X(3),X,0,N,string,N,"institutional only, blank for professional"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,12,From_DOS,89,96,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,13,To_DOS,97,104,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,14,Admission_Date,105,112,8,9(8),9,0,N,date,N,"99999999 if not inpatient. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,15,Discharge_Date,113,120,8,9(8),9,0,N,date,N,"99999999 if not inpatient/not yet discharged. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,16,Admission_Type,121,121,1,X(1),X,0,N,string,N,blank if N/A
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,17,Admission_Source,122,122,1,X(1),X,0,N,string,N,blank if N/A
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,18,Discharge_Status,123,124,2,X(2),X,0,N,string,N,blank if N/A
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,19,Principal_Diagnosis_Code,125,131,7,X(7),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,20,Diagnosis_Code_2,132,138,7,X(7),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,21,Diagnosis_Code_3,139,145,7,X(7),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,22,Diagnosis_Code_4,146,152,7,X(7),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,23,Principal_Procedure_Code,153,157,5,X(5),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,24,Procedure_Code_2,158,162,5,X(5),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,25,Modifier_1,163,164,2,X(2),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,26,Modifier_2,165,166,2,X(2),X,0,N,string,N,may be blank
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,27,Revenue_Code,167,170,4,X(4),X,0,N,string,N,"institutional only, blank for professional"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,28,DRG_Code,171,173,3,X(3),X,0,N,string,N,"inpatient only, blank otherwise"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,29,Units,174,178,5,9(5),9,0,N,int,N,Zero-padded unsigned numeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,30,Billed_Amount,179,189,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,31,Allowed_Amount,190,200,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,32,Paid_Amount,201,211,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,33,Patient_Responsibility_Amount,212,220,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,34,TPL_Amount,221,229,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,amount paid by other insurance. 2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,35,Claim_Status,230,230,1,X(1),X,0,N,string,N,"P=Paid,D=Denied,S=Suspended,R=Reversed"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,36,Claim_Status_Date,231,238,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,37,Adjustment_Reason_Code,239,242,4,X(4),X,0,N,string,N,"CARC code, blank if paid in full"
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,38,EOB_Code,243,246,4,X(4),X,0,N,string,N,explanation of benefits code
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,39,Received_Date,247,254,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,40,Processed_Date,255,262,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,41,Paid_Date,263,270,8,9(8),9,0,N,date,N,"99999999 if not yet paid. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,42,Check_EFT_Number,271,280,10,X(10),X,0,N,string,N,blank until paid
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,43,COB_Indicator,281,281,1,X(1),X,0,N,string,N,Y/N other coverage exists
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,44,Prior_Auth_Number,282,293,12,X(12),X,0,N,string,N,blank if no PA required/on file
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,45,Last_Update_Date,294,301,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,46,Source_System_Code,302,304,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+MEDICAL_CLAIMS,MEDICAL_CLAIMS.txt,320,47,FILLER,305,320,16,X(16),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,1,Rx_Claim_ID,1,12,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,2,Member_ID,13,22,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,3,Medicaid_ID,23,34,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,4,Pharmacy_NPI,35,44,10,9(10),9,0,N,string,N,Zero-padded unsigned numeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,5,Pharmacy_NCPDP_ID,45,51,7,X(7),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,6,Prescriber_NPI,52,61,10,9(10),9,0,N,string,N,Zero-padded unsigned numeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,7,Prescriber_DEA,62,70,9,X(9),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,8,NDC_Code,71,81,11,X(11),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,9,Drug_Name,82,111,30,X(30),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,10,Drug_Strength,112,121,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,11,Dosage_Form_Code,122,123,2,X(2),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,12,GCN_Sequence_Number,124,129,6,X(6),X,0,N,string,N,generic code number sequence
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,13,Therapeutic_Class_Code,130,135,6,X(6),X,0,N,string,N,GPI/therapeutic class
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,14,Fill_Date,136,143,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,15,Rx_Number,144,155,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,16,Refill_Number,156,157,2,9(2),9,0,N,int,N,0 = original fill
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,17,Days_Supply,158,160,3,9(3),9,0,N,int,N,Zero-padded unsigned numeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,18,Quantity_Dispensed,161,168,8,9(5)V9(3),9,3,N,"decimal(8,3)",N,3 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,19,Ingredient_Cost,169,177,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,20,Dispensing_Fee,178,184,7,9(5)V9(2),9,2,N,"decimal(7,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,21,Sales_Tax,185,190,6,9(4)V9(2),9,2,N,"decimal(6,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,22,Incentive_Fee,191,196,6,9(4)V9(2),9,2,N,"decimal(6,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,23,Copay_Amount,197,202,6,9(4)V9(2),9,2,N,"decimal(6,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,24,TPL_Amount,203,209,7,9(5)V9(2),9,2,N,"decimal(7,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,25,Paid_Amount,210,218,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,26,DAW_Code,219,219,1,X(1),X,0,N,string,N,0-9 dispense as written
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,27,Compound_Code,220,220,1,X(1),X,0,N,string,N,"1=Not a compound,2=Compound"
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,28,Prior_Auth_Number,221,232,12,X(12),X,0,N,string,N,blank if not required
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,29,Claim_Status,233,233,1,X(1),X,0,N,string,N,"P=Paid,D=Denied,R=Reversed"
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,30,Reversal_Indicator,234,234,1,X(1),X,0,N,string,N,Y/N
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,31,Received_Date,235,242,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,32,Paid_Date,243,250,8,9(8),9,0,N,date,N,"99999999 if not paid. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,33,Last_Update_Date,251,258,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,34,Source_System_Code,259,261,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+PHARMACY_CLAIMS,PHARMACY_CLAIMS.txt,270,35,FILLER,262,270,9,X(9),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+FINANCE,FINANCE.txt,220,1,Transaction_ID,1,14,14,X(14),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,2,Claim_ID,15,27,13,X(13),X,0,N,string,N,blank for non-claim transactions e.g. capitation
+FINANCE,FINANCE.txt,220,3,Member_ID,28,37,10,X(10),X,0,N,string,N,blank for provider-level transactions
+FINANCE,FINANCE.txt,220,4,Provider_ID,38,47,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,5,Payee_ID,48,57,10,X(10),X,0,N,string,N,often same as Provider_ID
+FINANCE,FINANCE.txt,220,6,Transaction_Type,58,59,2,X(2),X,0,N,string,N,"PY,RC,AJ,CP,VD"
+FINANCE,FINANCE.txt,220,7,Transaction_Subtype,60,62,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,8,Transaction_Date,63,70,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+FINANCE,FINANCE.txt,220,9,Posting_Date,71,78,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+FINANCE,FINANCE.txt,220,10,Amount,79,90,12,S9(9)V9(2),S9,2,Y,"decimal(11,2)",N,"leading sign + 9 int + 2 dec. 2 implied decimal place(s) -- no literal decimal point in the raw bytes; first byte is a separate leading sign character ('+' or '-'), not part of the digits."
+FINANCE,FINANCE.txt,220,11,Payment_Method_Code,91,92,2,X(2),X,0,N,string,N,"EF=EFT,CK=Check,WR=Warrant"
+FINANCE,FINANCE.txt,220,12,Check_EFT_Number,93,104,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,13,Check_Date,105,112,8,9(8),9,0,N,date,N,"99999999 if not yet issued. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+FINANCE,FINANCE.txt,220,14,Void_Indicator,113,113,1,X(1),X,0,N,string,N,Y/N
+FINANCE,FINANCE.txt,220,15,Void_Date,114,121,8,9(8),9,0,N,date,N,"99999999 if not voided. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+FINANCE,FINANCE.txt,220,16,GL_Code,122,129,8,X(8),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,17,Cost_Center,130,135,6,X(6),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,18,Fund_Code,136,139,4,X(4),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,19,Fiscal_Year,140,143,4,9(4),9,0,N,int,N,Zero-padded unsigned numeric value.
+FINANCE,FINANCE.txt,220,20,Fiscal_Period,144,145,2,9(2),9,0,N,int,N,Zero-padded unsigned numeric value.
+FINANCE,FINANCE.txt,220,21,Batch_Number,146,155,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,22,Warrant_Number,156,165,10,X(10),X,0,N,string,N,blank unless state warrant issued
+FINANCE,FINANCE.txt,220,23,Vendor_ID,166,175,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,24,Federal_Share_Amount,176,186,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,FMAP federal portion. 2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+FINANCE,FINANCE.txt,220,25,State_Share_Amount,187,197,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+FINANCE,FINANCE.txt,220,26,Recoupment_Reason_Code,198,201,4,X(4),X,0,N,string,N,blank unless Transaction_Type=RC
+FINANCE,FINANCE.txt,220,27,Last_Update_Date,202,209,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+FINANCE,FINANCE.txt,220,28,Source_System_Code,210,212,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+FINANCE,FINANCE.txt,220,29,FILLER,213,220,8,X(8),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,1,PA_ID,1,12,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,2,Member_ID,13,22,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,3,Medicaid_ID,23,34,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,4,Requesting_Provider_ID,35,44,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,5,Servicing_Provider_ID,45,54,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,6,Service_Type,55,57,3,X(3),X,0,N,string,N,"IP,OP,DME,RX,BH"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,7,PA_Type,58,59,2,X(2),X,0,N,string,N,"01=Initial,02=Extension,03=Retro"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,8,Diagnosis_Code_1,60,66,7,X(7),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,9,Diagnosis_Code_2,67,73,7,X(7),X,0,N,string,N,may be blank
+PRIOR_AUTH,PRIOR_AUTH.txt,180,10,Procedure_Code,74,78,5,X(5),X,0,N,string,N,may be blank for RX/DME by NDC
+PRIOR_AUTH,PRIOR_AUTH.txt,180,11,Modifier,79,80,2,X(2),X,0,N,string,N,may be blank
+PRIOR_AUTH,PRIOR_AUTH.txt,180,12,Revenue_Code,81,84,4,X(4),X,0,N,string,N,"institutional only, may be blank"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,13,NDC_Code,85,95,11,X(11),X,0,N,string,N,"pharmacy PAs only, blank otherwise"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,14,Requested_Units,96,100,5,9(5),9,0,N,int,N,Zero-padded unsigned numeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,15,Approved_Units,101,105,5,9(5),9,0,N,int,N,0 if denied
+PRIOR_AUTH,PRIOR_AUTH.txt,180,16,Requested_Date,106,113,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PRIOR_AUTH,PRIOR_AUTH.txt,180,17,Decision_Date,114,121,8,9(8),9,0,N,date,N,"99999999 if pending. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PRIOR_AUTH,PRIOR_AUTH.txt,180,18,Decision_Status,122,122,1,X(1),X,0,N,string,N,"A=Approved,D=Denied,P=Pending,R=Partial"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,19,Denial_Reason_Code,123,126,4,X(4),X,0,N,string,N,blank unless denied/partial
+PRIOR_AUTH,PRIOR_AUTH.txt,180,20,Review_Type,127,128,2,X(2),X,0,N,string,N,"PR=Prospective,CR=Concurrent,RE=Retro"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,21,Urgency_Indicator,129,129,1,X(1),X,0,N,string,N,Y/N expedited review
+PRIOR_AUTH,PRIOR_AUTH.txt,180,22,Start_Date,130,137,8,9(8),9,0,N,date,N,"99999999 if N/A. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PRIOR_AUTH,PRIOR_AUTH.txt,180,23,End_Date,138,145,8,9(8),9,0,N,date,N,"99999999 if N/A. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PRIOR_AUTH,PRIOR_AUTH.txt,180,24,Extension_Indicator,146,146,1,X(1),X,0,N,string,N,Y/N this is an extension of a prior PA
+PRIOR_AUTH,PRIOR_AUTH.txt,180,25,Peer_Review_Indicator,147,147,1,X(1),X,0,N,string,N,Y/N required physician peer review
+PRIOR_AUTH,PRIOR_AUTH.txt,180,26,Reviewer_ID,148,155,8,X(8),X,0,N,string,N,"clinical reviewer, may be blank if auto-adjudicated"
+PRIOR_AUTH,PRIOR_AUTH.txt,180,27,Last_Update_Date,156,163,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+PRIOR_AUTH,PRIOR_AUTH.txt,180,28,Source_System_Code,164,166,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+PRIOR_AUTH,PRIOR_AUTH.txt,180,29,FILLER,167,180,14,X(14),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+TPL,TPL.txt,230,1,TPL_ID,1,10,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+TPL,TPL.txt,230,2,Member_ID,11,20,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+TPL,TPL.txt,230,3,Medicaid_ID,21,32,12,X(12),X,0,N,string,N,Free-text/coded alphanumeric value.
+TPL,TPL.txt,230,4,Carrier_Name,33,62,30,X(30),X,0,N,string,N,may be blank if carrier unresolved
+TPL,TPL.txt,230,5,Carrier_Code,63,68,6,X(6),X,0,N,string,N,Free-text/coded alphanumeric value.
+TPL,TPL.txt,230,6,Carrier_Address,69,98,30,X(30),X,0,N,string,N,may be blank
+TPL,TPL.txt,230,7,Carrier_City,99,118,20,X(20),X,0,N,string,N,may be blank
+TPL,TPL.txt,230,8,Carrier_State,119,120,2,X(2),X,0,N,string,N,may be blank
+TPL,TPL.txt,230,9,Carrier_Zip,121,129,9,9(9),9,0,N,string,N,zero-filled if unknown
+TPL,TPL.txt,230,10,Carrier_Phone,130,139,10,9(10),9,0,N,string,N,zero-filled if unknown
+TPL,TPL.txt,230,11,Policy_Number,140,154,15,X(15),X,0,N,string,N,may be blank if unresolved
+TPL,TPL.txt,230,12,Group_Number,155,166,12,X(12),X,0,N,string,N,may be blank
+TPL,TPL.txt,230,13,Subscriber_ID,167,178,12,X(12),X,0,N,string,N,may differ from member if dependent
+TPL,TPL.txt,230,14,Relationship_Code,179,180,2,X(2),X,0,N,string,N,"01=Self,18=Spouse,19=Child,20=Other"
+TPL,TPL.txt,230,15,Coverage_Type,181,182,2,X(2),X,0,N,string,N,"CI,MC,LI,WC,MD,HM"
+TPL,TPL.txt,230,16,Plan_Type,183,185,3,X(3),X,0,N,string,N,"PPO,HMO,EPO,POS,FFS"
+TPL,TPL.txt,230,17,Effective_Date,186,193,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+TPL,TPL.txt,230,18,Term_Date,194,201,8,9(8),9,0,N,date,N,"99999999 if active/open. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+TPL,TPL.txt,230,19,COB_Indicator,202,202,1,X(1),X,0,N,string,N,Y/N
+TPL,TPL.txt,230,20,Verification_Date,203,210,8,9(8),9,0,N,date,N,"99999999 if never verified. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+TPL,TPL.txt,230,21,Verification_Source,211,213,3,X(3),X,0,N,string,N,e.g. MCV=Match/Contractor Verification
+TPL,TPL.txt,230,22,Verification_Status,214,214,1,X(1),X,0,N,string,N,"V=Verified,U=Unverified,D=Disputed"
+TPL,TPL.txt,230,23,Last_Update_Date,215,222,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+TPL,TPL.txt,230,24,Source_System_Code,223,225,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+TPL,TPL.txt,230,25,FILLER,226,230,5,X(5),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+DRUG_REBATE,DRUG_REBATE.txt,260,1,Rebate_Record_ID,1,14,14,X(14),X,0,N,string,N,Free-text/coded alphanumeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,2,NDC_Code,15,25,11,X(11),X,0,N,string,N,Free-text/coded alphanumeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,3,Drug_Name,26,55,30,X(30),X,0,N,string,N,Free-text/coded alphanumeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,4,Labeler_Code,56,60,5,X(5),X,0,N,string,N,first 5 digits of NDC = manufacturer
+DRUG_REBATE,DRUG_REBATE.txt,260,5,Manufacturer_Name,61,90,30,X(30),X,0,N,string,N,Free-text/coded alphanumeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,6,Rebate_Quarter,91,91,1,X(1),X,0,N,string,N,1-4
+DRUG_REBATE,DRUG_REBATE.txt,260,7,Rebate_Year,92,95,4,9(4),9,0,N,int,N,Zero-padded unsigned numeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,8,Units_Reimbursed,96,107,12,9(9)V9(3),9,3,N,"decimal(12,3)",N,3 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,9,Number_Of_Prescriptions,108,114,7,9(7),9,0,N,int,N,Zero-padded unsigned numeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,10,Total_Amount_Reimbursed,115,125,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,11,Ingredient_Cost_Paid,126,136,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,12,Dispensing_Fees_Paid,137,147,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,13,AMP_Amount,148,156,9,9(5)V9(4),9,4,N,"decimal(9,4)",N,Average Manufacturer Price per unit. 4 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,14,Best_Price_Amount,157,165,9,9(5)V9(4),9,4,N,"decimal(9,4)",N,4 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,15,URA_Amount,166,174,9,9(5)V9(4),9,4,N,"decimal(9,4)",N,Unit Rebate Amount per CMS formula. 4 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,16,CPI_Penalty_Amount,175,183,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,additional rebate for price growth > CPI-U. 2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,17,Rebate_Amount_Invoiced,184,194,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,18,Rebate_Amount_Collected,195,205,11,9(9)V9(2),9,2,N,"decimal(11,2)",N,2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+DRUG_REBATE,DRUG_REBATE.txt,260,19,Dispute_Indicator,206,206,1,X(1),X,0,N,string,N,Y/N manufacturer disputed invoice
+DRUG_REBATE,DRUG_REBATE.txt,260,20,Dispute_Reason_Code,207,210,4,X(4),X,0,N,string,N,blank unless disputed
+DRUG_REBATE,DRUG_REBATE.txt,260,21,Invoice_Date,211,218,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+DRUG_REBATE,DRUG_REBATE.txt,260,22,Payment_Due_Date,219,226,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+DRUG_REBATE,DRUG_REBATE.txt,260,23,Payment_Received_Date,227,234,8,9(8),9,0,N,date,N,"99999999 if not yet received. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+DRUG_REBATE,DRUG_REBATE.txt,260,24,Drug_Category_Code,235,235,1,X(1),X,0,N,string,N,"S=Single source,I=Innovator multi,N=Non-innovator"
+DRUG_REBATE,DRUG_REBATE.txt,260,25,Unit_Of_Measure,236,237,2,X(2),X,0,N,string,N,"EA,ML,GM,UN,BX"
+DRUG_REBATE,DRUG_REBATE.txt,260,26,State_Code,238,239,2,X(2),X,0,N,string,N,Free-text/coded alphanumeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,27,Last_Update_Date,240,247,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+DRUG_REBATE,DRUG_REBATE.txt,260,28,Source_System_Code,248,250,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+DRUG_REBATE,DRUG_REBATE.txt,260,29,FILLER,251,260,10,X(10),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
+REFERENCE,REFERENCE.txt,180,1,Reference_Table_ID,1,6,6,X(6),X,0,N,string,N,which code table this row belongs to
+REFERENCE,REFERENCE.txt,180,2,Code_Value,7,16,10,X(10),X,0,N,string,N,Free-text/coded alphanumeric value.
+REFERENCE,REFERENCE.txt,180,3,Short_Description,17,46,30,X(30),X,0,N,string,N,Free-text/coded alphanumeric value.
+REFERENCE,REFERENCE.txt,180,4,Long_Description,47,106,60,X(60),X,0,N,string,N,Free-text/coded alphanumeric value.
+REFERENCE,REFERENCE.txt,180,5,Code_Category,107,110,4,X(4),X,0,N,string,N,"grouping within table, may be blank"
+REFERENCE,REFERENCE.txt,180,6,Parent_Code,111,120,10,X(10),X,0,N,string,N,"for hierarchical codes, may be blank"
+REFERENCE,REFERENCE.txt,180,7,Effective_Date,121,128,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+REFERENCE,REFERENCE.txt,180,8,Termination_Date,129,136,8,9(8),9,0,N,date,N,"99999999 if active. date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+REFERENCE,REFERENCE.txt,180,9,Active_Indicator,137,137,1,X(1),X,0,N,string,N,Y/N
+REFERENCE,REFERENCE.txt,180,10,Federal_Code_Indicator,138,138,1,X(1),X,0,N,string,N,Y/N federally-defined code
+REFERENCE,REFERENCE.txt,180,11,State_Specific_Indicator,139,139,1,X(1),X,0,N,string,N,Y/N
+REFERENCE,REFERENCE.txt,180,12,Reimbursable_Indicator,140,140,1,X(1),X,0,N,string,N,"Y/N, applicable to procedure/revenue codes"
+REFERENCE,REFERENCE.txt,180,13,Prior_Auth_Required_Indicator,141,141,1,X(1),X,0,N,string,N,Y/N
+REFERENCE,REFERENCE.txt,180,14,Age_Restriction_Min,142,144,3,9(3),9,0,N,int,N,0 if none
+REFERENCE,REFERENCE.txt,180,15,Age_Restriction_Max,145,147,3,9(3),9,0,N,int,N,999 if none
+REFERENCE,REFERENCE.txt,180,16,Gender_Restriction,148,148,1,X(1),X,0,N,string,N,M/F/blank=none
+REFERENCE,REFERENCE.txt,180,17,Rate_Amount,149,157,9,9(7)V9(2),9,2,N,"decimal(9,2)",N,fee schedule amount if applicable. 2 implied decimal place(s) -- no literal decimal point in the raw bytes.
+REFERENCE,REFERENCE.txt,180,18,Unit_Of_Measure,158,159,2,X(2),X,0,N,string,N,blank if N/A
+REFERENCE,REFERENCE.txt,180,19,Sort_Order,160,163,4,9(4),9,0,N,int,N,Zero-padded unsigned numeric value.
+REFERENCE,REFERENCE.txt,180,20,Last_Update_Date,164,171,8,9(8),9,0,N,date,N,"date in YYYYMMDD format; value of all 9s (e.g. 99999999) means open-ended/not-applicable/pending, map to NULL."
+REFERENCE,REFERENCE.txt,180,21,Source_System_Code,172,174,3,X(3),X,0,N,string,N,Free-text/coded alphanumeric value.
+REFERENCE,REFERENCE.txt,180,22,FILLER,175,180,6,X(6),X,0,N,,Y,Unused reserved space padding out the record to its fixed length. No business data; skip during mapping.
